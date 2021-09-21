@@ -1,16 +1,15 @@
 
 
 Domainmodel:
-
-Task 1: 
+ 
 
 Class: Car
 Properties: Id, Make, Model, Color, Km, Price, Year 
 List in class: Cars  (List<car> Cars;)					(Done)					
 
-Task 2: Display a List of all cars, sorted by Make (Alphabetic order). -- In a listbox. (Done)
+Task 1.0: Display a List of all cars, sorted by Make (Alphabetic order). -- In a listbox. (Done)
 
-Task 3: Form1 button that gives answer to how many red cars. "You have x red cars" (Done)
+Task 1: Form1 button that gives answer to how many red cars. "You have x red cars" (Done)
 
-Task 4: Amount of cars older than 2003. 
+Task 2: Amount of cars older than 2003. 
 

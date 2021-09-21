@@ -41,6 +41,15 @@ namespace Car_Dealer_v1._0
             Cars.Add(new Car() { Id = 801, Make = "Audi", Model = "A7", Color = "White", Km = 492, Price = 187500, Year = 2002 });
             Cars.Add(new Car() { Id = 6031, Make = "Audi", Model = "A6", Color = "Blue", Km = 553, Price = 55400, Year = 2011 });
 
+            var sortedcars = Cars.OrderBy(x => x.Make); // sorts cars by name
+            foreach (var item in sortedcars)
+            {
+                listBox1.Items.Add($"ID:{item.Id} Make:{item.Make} Model:{item.Model} Color:{item.Color} km:{item.Km} Price:{item.Price} Year:{item.Year}"); 
+            }
+            
+
+
+            // Button that counts amount of red cars
             AmountRed.Click += new EventHandler(
                     (sender, e) =>
                     {
@@ -52,7 +61,7 @@ namespace Car_Dealer_v1._0
             
 
             
-            //listBox1.Items.Add($"Vi har {Cars.Count} bilar i lager."); // Adds all cars to listbox
+            
 
         }
     }
