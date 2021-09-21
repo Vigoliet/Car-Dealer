@@ -33,6 +33,7 @@ namespace Car_Dealer_v1._0
             this.AmountRed = new System.Windows.Forms.Button();
             this.olderthan2003 = new System.Windows.Forms.Button();
             this.amountgreyvolvo = new System.Windows.Forms.Button();
+            this.AverageBmwKm = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // listBox1
@@ -45,7 +46,7 @@ namespace Car_Dealer_v1._0
             // 
             // AmountRed
             // 
-            this.AmountRed.Location = new System.Drawing.Point(59, 12);
+            this.AmountRed.Location = new System.Drawing.Point(12, 12);
             this.AmountRed.Name = "AmountRed";
             this.AmountRed.Size = new System.Drawing.Size(107, 82);
             this.AmountRed.TabIndex = 1;
@@ -54,7 +55,7 @@ namespace Car_Dealer_v1._0
             // 
             // olderthan2003
             // 
-            this.olderthan2003.Location = new System.Drawing.Point(59, 100);
+            this.olderthan2003.Location = new System.Drawing.Point(12, 188);
             this.olderthan2003.Name = "olderthan2003";
             this.olderthan2003.Size = new System.Drawing.Size(107, 82);
             this.olderthan2003.TabIndex = 2;
@@ -63,18 +64,28 @@ namespace Car_Dealer_v1._0
             // 
             // amountgreyvolvo
             // 
-            this.amountgreyvolvo.Location = new System.Drawing.Point(59, 188);
+            this.amountgreyvolvo.Location = new System.Drawing.Point(12, 100);
             this.amountgreyvolvo.Name = "amountgreyvolvo";
             this.amountgreyvolvo.Size = new System.Drawing.Size(107, 82);
             this.amountgreyvolvo.TabIndex = 3;
             this.amountgreyvolvo.Text = "button1";
             this.amountgreyvolvo.UseVisualStyleBackColor = true;
             // 
+            // AverageBmwKm
+            // 
+            this.AverageBmwKm.Location = new System.Drawing.Point(12, 276);
+            this.AverageBmwKm.Name = "AverageBmwKm";
+            this.AverageBmwKm.Size = new System.Drawing.Size(107, 82);
+            this.AverageBmwKm.TabIndex = 4;
+            this.AverageBmwKm.Text = "button1";
+            this.AverageBmwKm.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.AverageBmwKm);
             this.Controls.Add(this.amountgreyvolvo);
             this.Controls.Add(this.olderthan2003);
             this.Controls.Add(this.AmountRed);
@@ -91,6 +102,7 @@ namespace Car_Dealer_v1._0
         private System.Windows.Forms.Button AmountRed;
         private System.Windows.Forms.Button olderthan2003;
         private System.Windows.Forms.Button amountgreyvolvo;
+        private System.Windows.Forms.Button AverageBmwKm;
     }
 }
 

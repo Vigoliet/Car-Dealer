@@ -13,5 +13,7 @@ Task 1: Form1 button that gives answer to how many red cars. "You have x red car
 
 Task 2: Amount of cars older than 2003. (Done)
 
+Task 3: Amount of grey volvos. (Done)
 
+Task 4: Average km för BMW
 

@@ -20,6 +20,7 @@ namespace Car_Dealer_v1._0
             AmountRed.Text = "Amount of red cars:";
             olderthan2003.Text = "Amount of cars older than 2003:";
             amountgreyvolvo.Text = "Amount of grey volvos:";
+            AverageBmwKm.Text = "Average KM on our BMW";
             //All Cars
             Cars.Add(new Car() { Id = 1, Make = "Volvo", Model = "V70", Color = "White", Km = 1292, Price = 3465, Year = 1998 });
             Cars.Add(new Car() { Id = 31, Make = "Skoda", Model = "Fabia", Color = "Red", Km = 1292, Price = 76556, Year = 2001 });
@@ -72,13 +73,20 @@ namespace Car_Dealer_v1._0
             amountgreyvolvo.Click += new EventHandler(                                                         
                 (sender, e) =>
                 {
-                    int grey = Cars.FindAll(x => x.Make == "Volvo").Count(y => y.Color == "Grey");
+                    int grey = Cars.FindAll(x => x.Make == "Volvo").Count(y => y.Color == "Grey"); //Finds and counts Volvos that are grey
                     listBox1.Items.Add($"================="); //blankrad
-                    listBox1.Items.Add($"We have {grey} grey Volvos ");
+                    listBox1.Items.Add($"We have {grey} grey Volvos "); //prints
                 }
                 );
-            
 
+            AverageBmwKm.Click += new EventHandler(
+                (sender, e) =>
+                {
+                    double d = Cars.FindAll(x => x.Make == "BMW").Average(y => y.Km); //Finds and calculates the average KM on the cars
+                    listBox1.Items.Add($"================="); //blankrad
+                    listBox1.Items.Add($"The average Kilometres on our BWM's: {d} "); //prints
+                }
+                );
         }
     }
     
