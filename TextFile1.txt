@@ -15,7 +15,7 @@ Task 2: Amount of cars older than 2003. (Done)
 
 Task 3: Amount of grey volvos. (Done)
 
-Task 4: Average km för BMW. (Done)
+Task 4: Average km for BMW. (Done)
 
 Task 5: Most expensive car from the list. (Done)
 

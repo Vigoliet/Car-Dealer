@@ -61,7 +61,7 @@ namespace Car_Dealer_v1._0
                         listBox1.Items.Add($"We have {i} red cars."); //prints
                     }
                     );
-
+            //Button prints to list all cars that made are older than 2003
             olderthan2003.Click += new EventHandler(
                     (sender, e) =>
                     {
@@ -91,11 +91,12 @@ namespace Car_Dealer_v1._0
             MostExpensiveCar.Click += new EventHandler(
                 (sender, e) =>
                 {
-                    Cars = Cars.OrderByDescending(x => x.Price).ToList();//Orders the list by price in descending order
+                    Cars = Cars.OrderByDescending(x => x.Price).ToList(); //Orders the list by price in descending order
                     listBox1.Items.Add($"=================");   //White Space
-                    listBox1.Items.Add($"The most expensive car in storage is {Cars[0].Make} {Cars[0].Model} {Cars[0].Year}");
+                    listBox1.Items.Add($"The most expensive car in storage is {Cars[0].Make} {Cars[0].Model} {Cars[0].Year} och den kostar {Cars[0].Price} kr"); //prints
                 }
                 );
+            
           
         }
     }
