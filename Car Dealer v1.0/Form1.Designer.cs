@@ -34,6 +34,7 @@ namespace Car_Dealer_v1._0
             this.olderthan2003 = new System.Windows.Forms.Button();
             this.amountgreyvolvo = new System.Windows.Forms.Button();
             this.AverageBmwKm = new System.Windows.Forms.Button();
+            this.MostExpensiveCar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // listBox1
@@ -80,11 +81,21 @@ namespace Car_Dealer_v1._0
             this.AverageBmwKm.Text = "button1";
             this.AverageBmwKm.UseVisualStyleBackColor = true;
             // 
+            // MostExpensiveCar
+            // 
+            this.MostExpensiveCar.Location = new System.Drawing.Point(125, 12);
+            this.MostExpensiveCar.Name = "MostExpensiveCar";
+            this.MostExpensiveCar.Size = new System.Drawing.Size(107, 82);
+            this.MostExpensiveCar.TabIndex = 5;
+            this.MostExpensiveCar.Text = "button1";
+            this.MostExpensiveCar.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.MostExpensiveCar);
             this.Controls.Add(this.AverageBmwKm);
             this.Controls.Add(this.amountgreyvolvo);
             this.Controls.Add(this.olderthan2003);
@@ -103,6 +114,7 @@ namespace Car_Dealer_v1._0
         private System.Windows.Forms.Button olderthan2003;
         private System.Windows.Forms.Button amountgreyvolvo;
         private System.Windows.Forms.Button AverageBmwKm;
+        private System.Windows.Forms.Button MostExpensiveCar;
     }
 }
 

@@ -21,6 +21,7 @@ namespace Car_Dealer_v1._0
             olderthan2003.Text = "Amount of cars older than 2003:";
             amountgreyvolvo.Text = "Amount of grey volvos:";
             AverageBmwKm.Text = "Average KM on our BMW";
+            MostExpensiveCar.Text = "This is the most expensive car we offer:";
             //All Cars
             Cars.Add(new Car() { Id = 1, Make = "Volvo", Model = "V70", Color = "White", Km = 1292, Price = 3465, Year = 1998 });
             Cars.Add(new Car() { Id = 31, Make = "Skoda", Model = "Fabia", Color = "Red", Km = 1292, Price = 76556, Year = 2001 });
@@ -45,7 +46,7 @@ namespace Car_Dealer_v1._0
             Cars.Add(new Car() { Id = 801, Make = "Audi", Model = "A7", Color = "White", Km = 492, Price = 187500, Year = 2002 });
             Cars.Add(new Car() { Id = 6031, Make = "Audi", Model = "A6", Color = "Blue", Km = 553, Price = 55400, Year = 2011 });
 
-            var sortedcars = Cars.OrderBy(x => x.Make); // sorts cars by name TASK 1.0
+            var sortedcars = Cars.OrderBy(x => x.Make); // Sorts cars by name TASK 1.0
             foreach (var item in sortedcars)
             {
                 listBox1.Items.Add($"ID:{item.Id} Make:{item.Make} Model:{item.Model} Color:{item.Color} km:{item.Km} Price:{item.Price} Year:{item.Year}"); 
@@ -56,7 +57,7 @@ namespace Car_Dealer_v1._0
                     (sender, e) =>
                     {
                         int i = Cars.Count(x => x.Color == "Red");   //Counts amount of cars that have "red" as color
-                        listBox1.Items.Add($"=================");   //blankrad
+                        listBox1.Items.Add($"=================");   //White Space
                         listBox1.Items.Add($"We have {i} red cars."); //prints
                     }
                     );
@@ -74,7 +75,7 @@ namespace Car_Dealer_v1._0
                 (sender, e) =>
                 {
                     int grey = Cars.FindAll(x => x.Make == "Volvo").Count(y => y.Color == "Grey"); //Finds and counts Volvos that are grey
-                    listBox1.Items.Add($"================="); //blankrad
+                    listBox1.Items.Add($"================="); //White Space
                     listBox1.Items.Add($"We have {grey} grey Volvos "); //prints
                 }
                 );
@@ -87,6 +88,15 @@ namespace Car_Dealer_v1._0
                     listBox1.Items.Add($"The average Kilometres on our BWM's: {d} "); //prints
                 }
                 );
+            MostExpensiveCar.Click += new EventHandler(
+                (sender, e) =>
+                {
+                    Cars = Cars.OrderByDescending(x => x.Price).ToList();//Orders the list by price in descending order
+                    listBox1.Items.Add($"=================");   //White Space
+                    listBox1.Items.Add($"The most expensive car in storage is {Cars[0].Make} {Cars[0].Model} {Cars[0].Year}");
+                }
+                );
+          
         }
     }
     
