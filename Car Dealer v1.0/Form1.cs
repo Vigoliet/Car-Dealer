@@ -41,7 +41,9 @@ namespace Car_Dealer_v1._0
             Cars.Add(new Car() { Id = 801, Make = "Audi", Model = "A7", Color = "White", Km = 492, Price = 187500, Year = 2002 });
             Cars.Add(new Car() { Id = 6031, Make = "Audi", Model = "A6", Color = "Blue", Km = 553, Price = 55400, Year = 2011 });
 
-            listBox1.Items.Add($"Vi har {Cars.Count} bilar i lager."); // Adds all cars to listbox
+            int i = Cars.Count(x => x.Color == "Red");
+            listBox1.Items.Add($"We have {i} red cars.");
+            //listBox1.Items.Add($"Vi har {Cars.Count} bilar i lager."); // Adds all cars to listbox
 
         }
     }
