@@ -17,6 +17,8 @@ namespace Car_Dealer_v1._0
         {
             InitializeComponent();
             Cars = new List<Car>();
+            AmountRed.Text = "Amount of red cars:";
+            olderthan2003.Text = "Amount of cars older than 2003:";
             //All Cars
             Cars.Add(new Car() { Id = 1, Make = "Volvo", Model = "V70", Color = "White", Km = 1292, Price = 3465, Year = 1998 });
             Cars.Add(new Car() { Id = 31, Make = "Skoda", Model = "Fabia", Color = "Red", Km = 1292, Price = 76556, Year = 2001 });
@@ -41,25 +43,30 @@ namespace Car_Dealer_v1._0
             Cars.Add(new Car() { Id = 801, Make = "Audi", Model = "A7", Color = "White", Km = 492, Price = 187500, Year = 2002 });
             Cars.Add(new Car() { Id = 6031, Make = "Audi", Model = "A6", Color = "Blue", Km = 553, Price = 55400, Year = 2011 });
 
-            var sortedcars = Cars.OrderBy(x => x.Make); // sorts cars by name
+            var sortedcars = Cars.OrderBy(x => x.Make); // sorts cars by name TASK 1.0
             foreach (var item in sortedcars)
             {
                 listBox1.Items.Add($"ID:{item.Id} Make:{item.Make} Model:{item.Model} Color:{item.Color} km:{item.Km} Price:{item.Price} Year:{item.Year}"); 
             }
             
-
-
-            // Button that counts amount of red cars
+            // Button that counts amount of red cars TASK 1
             AmountRed.Click += new EventHandler(
                     (sender, e) =>
                     {
-                        int i = Cars.Count(x => x.Color == "Red");
-                        listBox1.Items.Add($"We have {i} red cars.");
+                        int i = Cars.Count(x => x.Color == "Red");   //Counts amount of cars that have "red" as color
+                        listBox1.Items.Add($"=================");   //blankrad
+                        listBox1.Items.Add($"We have {i} red cars."); //prints
                     }
+                    );
 
-                );
-            
-
+            olderthan2003.Click += new EventHandler(
+                    (sender, e) =>
+                    {
+                        int i = Cars.Count(x => x.Year > 2003);    //Counts amount of cars older than 2003, not inc 2003 cars
+                        listBox1.Items.Add($"================="); //blankrad
+                        listBox1.Items.Add($"We have {i} cars that are older than 2003"); //prints
+                    }
+                    );
             
             
 

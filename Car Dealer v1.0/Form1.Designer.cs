@@ -31,6 +31,7 @@ namespace Car_Dealer_v1._0
         {
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.AmountRed = new System.Windows.Forms.Button();
+            this.olderthan2003 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // listBox1
@@ -50,11 +51,21 @@ namespace Car_Dealer_v1._0
             this.AmountRed.Text = "button1";
             this.AmountRed.UseVisualStyleBackColor = true;
             // 
+            // olderthan2003
+            // 
+            this.olderthan2003.Location = new System.Drawing.Point(59, 120);
+            this.olderthan2003.Name = "olderthan2003";
+            this.olderthan2003.Size = new System.Drawing.Size(107, 82);
+            this.olderthan2003.TabIndex = 2;
+            this.olderthan2003.Text = "button1";
+            this.olderthan2003.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.olderthan2003);
             this.Controls.Add(this.AmountRed);
             this.Controls.Add(this.listBox1);
             this.Name = "Form1";
@@ -67,6 +78,7 @@ namespace Car_Dealer_v1._0
 
         private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.Button AmountRed;
+        private System.Windows.Forms.Button olderthan2003;
     }
 }
 
