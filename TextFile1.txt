@@ -1,0 +1,14 @@
+
+
+Domainmodel:
+
+Task 1: 
+
+Class: Car
+Properties: Id, Make, Model, Color, Km, Price, Year
+List in class: Cars  (List<car> Cars;) 
+
+Task 2: Display a List of all cars, sorted by Make (Alphabetic order). -- In a listbox.
+
+Task 3: 
+
