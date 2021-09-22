@@ -93,7 +93,7 @@ namespace Car_Dealer_v1._0
                 {
                     Cars = Cars.OrderByDescending(x => x.Price).ToList(); //Orders the list by price in descending order
                     listBox1.Items.Add($"=================");   //White Space
-                    listBox1.Items.Add($"The most expensive car in storage is {Cars[0].Make} {Cars[0].Model} {Cars[0].Year} och den kostar {Cars[0].Price} kr"); //prints
+                    listBox1.Items.Add($"The most expensive car in storage is: {Cars[0].Make} {Cars[0].Model} {Cars[0].Year} and it costs: {Cars[0].Price} kr"); //prints
                 }
                 );
             
